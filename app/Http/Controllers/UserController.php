@@ -14,7 +14,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
         return (new UserService())->list();
     }
 
@@ -23,7 +22,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // TODO create
     }
 
     /**
@@ -31,7 +30,9 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        //
+        // TODO store
+        $user = User::create($request->validated());
+        return $user;
     }
 
     /**
@@ -39,7 +40,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return $user;
     }
 
     /**
@@ -47,7 +48,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        // TODO edit
+        // return (new UserService())->update($user);
     }
 
     /**
@@ -55,7 +57,8 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        //
+        // TODO update
+        // $request->validate();
     }
 
     /**
@@ -63,6 +66,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        // TODO destroy
     }
 }
